@@ -96,7 +96,6 @@ async function getRecipes() {
   //            take two parameters - resolve, and reject. These are functions
   //            you can call to either resolve the Promise or Reject it.
   const promise1 = new Promise(function(resolve,reject){
-    console.log("promise1");
 
     // A4. TODO - Loop through each recipe in the RECIPE_URLS array constant
     //            declared above
@@ -106,7 +105,6 @@ async function getRecipes() {
       //            a try / catch block. A6-A9 will be in the try portion, A10-A11
       //            will be in the catch portion.
       try{
-        console.log("try");
         // A6. TODO - For each URL in that array, fetch the URL - MDN also has a great
         //            article on fetch(). NOTE: Fetches are ASYNCHRONOUS, meaning that
         //            you must either use "await fetch(...)" or "fetch.then(...)". This
@@ -126,7 +124,6 @@ async function getRecipes() {
         //            we have provided. Then, pass the recipes array to the Promise's
         //            resolve() method.'
         if (response.ok){
-          console.log("finished retrieving");
           saveRecipesToStorage(fetch_recipe);
           resolve(fetch_recipe);
         }        
